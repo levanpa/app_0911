@@ -1,18 +1,13 @@
 <template lang="pug">
-.home-component-wrapper
-  img(alt="Vue logo", src="../assets/logo.png")
-  HelloWorld(msg="Welcome to Your Vue.js App")
+include ../pug/mixins.pug
+.home-component
 </template>
 
 <script>
-import HelloWorld from './HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  components: {},
+};
 </script>
 
 <style lang="sass">
