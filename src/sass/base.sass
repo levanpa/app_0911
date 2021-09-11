@@ -1,0 +1,121 @@
+@charset "utf-8"
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body *
+  max-height: 99999em
+  word-break: break-word
+
+img
+  display: inline-block
+  vertical-align: middle
+  max-width: 100%
+  height: auto
+
+input,
+label,
+select,
+button,
+textarea
+  margin: 0
+  border: 0
+  padding: 0
+  word-break: normal
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+  background: none
+  font: inherit
+  line-height: 1
+
+input:focus,
+button:focus,
+select:focus
+  outline: 0
+
+input[type=search]
+  -webkit-appearance: textfield
+
+::-webkit-search-decoration
+  display: none
+
+textarea
+  overflow: auto
+  white-space: pre-line
+
+ul, ol, li
+  list-style: none
+
+/* PRINTING
+ * -----------------------------------------------*/
+
+@media print
+  body
+    -webkit-print-color-adjust: exact
+  html,
+  body
+    margin: 0
+  @page
+    margin: 0
+  @page :left
+    margin: 0
+  @page :right
+    margin: 0
+  @page :first
+    margin-top: 0
+
+/* GENERAL
+ * -----------------------------------------------*/
+
+body
+  color: $font-color
+  font-family: $font-sans
+  font-weight: $font-weight
+  line-height: $line-height
+  -webkit-text-size-adjust: none
+  -moz-text-size-adjust: none
+  -ms-text-size-adjust: none
+
+a
+  color: $font-color
+  text-decoration: none
+.hidden
+  display: none
+.container
+  overflow: hidden
+
+/* RESPONSIVE
+ * -----------------------------------------------*/
+
++desktop
+  body
+    font-size: $font-size
+  .wrapper
+    width: $base-wrapper
+    margin-left: auto
+    margin-right: auto
+  .sm
+    display: none !important
+  .trans
+    opacity: 1
+    transition: opacity .25s ease
+    &:hover
+      opacity: .8
+
++mobile
+  html
+    font-size: calc(100vw / 7.5)
+  body
+    font-size: $font-size-sm
+  .md
+    display: none !important
+  .container
+    min-width: 320px
+  .wrapper
+    padding-left: .3rem
+    padding-right: .3rem
