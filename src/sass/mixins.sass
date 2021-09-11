@@ -1,0 +1,11 @@
+@charset "utf-8"
+
+=desktop
+  @media print, (min-width: $base-sm-break + 1)
+    @content
+=desktop-edge
+  @supports (-ms-ime-align: auto)
+    @content
+=mobile
+  @media only screen and (max-width: $base-sm-break)
+    @content
