@@ -71,6 +71,8 @@ ul, ol, li
 
 /* GENERAL
  * -----------------------------------------------*/
+html
+  scroll-behavior: smooth
 
 body
   color: $font-color
@@ -88,6 +90,12 @@ a
   display: none
 .container
   overflow: hidden
+  padding-top: $header-height
+.limit-lines
+  display: -webkit-box
+  overflow: hidden
+  text-overflow: ellipsis
+  -webkit-box-orient: vertical
 
 /* RESPONSIVE
  * -----------------------------------------------*/
@@ -105,7 +113,7 @@ a
     opacity: 1
     transition: opacity .25s ease
     &:hover
-      opacity: .8
+      opacity: .7
 
 +mobile
   html

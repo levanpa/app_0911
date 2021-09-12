@@ -1,2 +1,213 @@
 @charset "utf-8"
 @import "../base"
+
+// common
+img
+  background-color: $color-placeholder
+.section-title
+  max-width: 800px
+  margin: 0 auto 40px
+  color: #303442
+  font-size: 40px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: .1em
+
+.common-button
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  min-width: 100px
+  height: 48px
+  padding: 5px 30px
+  color: #fff
+  background-color: $color-primary
+  border-radius: 5px
+  font-weight: 700
+  text-align: center
+  cursor: pointer
+
+// .section-keyvisual
+.section-keyvisual
+  min-height: 600px
+  height: calc(100vh - $header-height)
+  padding: 50px 0
+  background-color: $color-placeholder
+  position: relative
+  .title-wrapper
+    +absolute-xy
+    max-width: 1000px
+    margin: 0 auto
+    color: #fff
+    font-size: 18px
+    text-align: center
+    .title
+      font-size: 50px
+      font-weight: 700
+
+// .section-special
+.section-special
+  padding: 50px 0
+  .special-list
+  .special-item
+    display: flex
+    margin-bottom: 80px
+  .item-image
+    flex: 670px 0 0
+  .item-content
+    padding: 50px 30px 30px 65px
+    background-color: #fff
+    box-shadow: -4px -4px 8px 3px rgba(#000,.1)
+    position: relative
+    top: 30px
+    left: -60px
+  .item-name
+    margin-bottom: 30px
+    font-size: 36px
+  .item-description
+    margin-bottom: 30px
+    color: #7b7b7b
+  .feature-list
+  .feature-item
+    margin-bottom: 10px
+    padding-left: 25px
+    position: relative
+    &::before
+      content: ""
+      width: 13px
+      height: 13px
+      background-color: $color-placeholder
+      position: absolute
+      top: 6px
+      left: 0
+
+// .section-product
+.section-product
+  padding: 40px 0
+  .product-list
+    display: flex
+    flex-wrap: wrap
+    margin: -15px
+  .product-item
+    width: calc(25% - 30px)
+    margin: 15px
+    position: relative
+  .product-image
+    width: 100%
+    height: 278px
+    margin-bottom: 10px
+  .product-name
+    margin-bottom: 10px
+    color: #000
+    -webkit-line-clamp: 2
+    font-size: 18px
+    // font-weight: 700
+  .product-bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+  .product-price
+    flex: 60% 0 0
+    color: $color-primary
+    font-weight: 700
+    .unit
+      margin-left: 5px
+      color: #555
+      font-weight: 400
+  .product-sold
+    color: #444
+    font-size: 14px
+  .product-tags
+    position: absolute
+    top: 0
+    right: 0
+    .product-discount
+
+// .section-intro
+.section-intro
+  min-height: 700px
+  padding-top: 30px
+  background-color: $color-placeholder
+  position: relative
+  .section-title
+    color: #fff
+  .intro-box
+    max-width: 600px
+    padding: 77px 100px 70px 90px
+    background-color: #fff
+    box-shadow: 0 0 8px 4px rgba(#000,.1)
+    +absolute-y
+    left: calc(50% - 450px)
+  .intro-title
+    margin-bottom: 10px
+    padding-left: 15px
+    background: linear-gradient(to bottom, $color-primary, $color-primary) left center/3px calc(100% - 20px) no-repeat
+    font-size: 36px
+    font-weight: 700
+    .is-highlight
+      color: $color-primary
+  .intro-text
+    margin-bottom: 40px
+    color: #7b7b7b
+  .button-wrapper
+    display: flex
+    flex-wrap: wrap
+    margin: -10px
+  .common-button
+    margin: 10px
+
+// .section-pricing
+.section-pricing
+  padding: 40px 0 80px
+  background-color: #fafafa
+  .pricing-list
+    display: flex
+    justify-content: center
+    margin: 60px -20px 0
+  .pricing-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: calc(100% / 3 - 100px)
+    margin: 0 20px
+    padding: 40px 30px
+    background-color: #fff
+    box-shadow: 0 0 8px 4px rgba(#000,.05)
+    border-radius: 10px
+    &:nth-child(2)
+      transform: scale(1.1)
+  .pricing-icon
+    margin-bottom: 20px
+  .pricing-title
+    margin-bottom: 20px
+    font-size: 24px
+    font-weight: 700
+    text-align: center
+  .feature-list
+    margin-bottom: 30px
+    padding-bottom: 10px
+    border-bottom: 1px solid #999
+  .feature-item
+    margin-bottom: 10px
+    padding-left: 25px
+    position: relative
+    &::before
+      content: ""
+      width: 13px
+      height: 13px
+      background-color: $color-placeholder
+      position: absolute
+      top: 6px
+      left: 0
+
+// .section-partner
+.section-partner
+  padding: 40px 0
+  .partner-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 -20px
+  .partner-item
+    margin: 10px 20px
