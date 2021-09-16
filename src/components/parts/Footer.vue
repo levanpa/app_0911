@@ -5,7 +5,7 @@
       span.subscribe-title Subscribe to Our Newsletter
       form.subscribe-form(action="")
         input.subscribe-input(type="text", name="email", placeholder="Your e-mail address")
-        button.subscribe-button.trans(type="submit") Subscribe now
+        button.subscribe-button.trans(type="submit", v-on:click.stop="") Subscribe now
   .wrapper.is-flex
     .footer-left
       .footer-top
@@ -34,12 +34,18 @@
       ul.social-list
         each item in Array(3)
           li.social-item
-            a.social-link.trans(href="#")
+            a.social-link.trans(href="#", target="_blank", rel="noopener")
+  ButtonTop
 </template>
 
 <script>
+import ButtonTop from "./ButtonTop.vue";
+
 export default {
   name: "Footer",
+  components: {
+    ButtonTop,
+  },
 };
 </script>
 

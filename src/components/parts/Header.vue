@@ -1,6 +1,6 @@
 <template lang="pug">
 - var imgPath = '@/assets/img/';
-header.header-component
+header.header-component(:class="{ 'is-active': isActive }")
   .wrapper
     .header-logo
       img(src=``, width="223", height="62", alt="missing")
@@ -25,6 +25,24 @@ header.header-component
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  methods: {
+    handleHeader: function () {
+      const scrollOffset = document.querySelector("html").scrollTop;
+      if (scrollOffset > 122) {
+        this.isActive = true;
+      } else {
+        this.isActive = false;
+      }
+    },
+  },
+  created: function () {
+    window.addEventListener("scroll", this.handleHeader);
+  },
 };
 </script>
 

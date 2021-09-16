@@ -50,6 +50,13 @@ textarea
 
 ul, ol, li
   list-style: none
+ol
+  counter-reset: count
+  > li
+    counter-increment: count
+
+address
+  font-style: normal
 
 /* PRINTING
  * -----------------------------------------------*/
