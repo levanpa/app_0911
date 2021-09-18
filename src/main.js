@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+const vueApp = createApp(App);
+
+vueApp.mixin({
+  methods: {
+    log: (...data) => console.log(...data)
+  }
+});
+
+vueApp.mount('#app');

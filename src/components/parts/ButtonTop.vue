@@ -8,6 +8,7 @@ export default {
   name: "ButtonTop",
   methods: {
     goToTop: function () {
+      this.log("log using global mixin");
       document.querySelector("html").scrollTop = 0;
     },
   },
