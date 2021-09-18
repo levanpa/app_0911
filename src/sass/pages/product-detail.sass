@@ -1,0 +1,84 @@
+@charset "utf-8"
+
+.section-product-detail
+  .wrapper
+    display: flex
+    margin-bottom: 40px
+  .product-image-wrapper
+    flex: 504px 0 0
+    margin-right: 40px
+  .big-image
+    margin-bottom: 10px
+  .thumbnail-list
+    display: flex
+    justify-content: space-around
+    margin: 0 -5px
+  .thumbnail-item
+    flex: 74px 0 0
+    margin: 0 5px
+    cursor: pointer
+
+  .product-detail-wrapper
+    flex: 1
+    .product-name
+      margin-bottom: 20px
+      -webkit-line-clamp: 2
+      font-size: 30px
+      font-weight: 700
+    .product-evaluate
+      display: flex
+      margin-bottom: 20px
+    .product-rate
+      width: 100px
+      height: 20px
+      background-color: $color-placeholder
+      margin-right: 8px
+      padding-right: 20px
+      border-right: 2px solid #f00
+    .product-sold
+      margin-right: 8px
+      padding-right: 8px
+      border-right: 2px solid #777
+    .product-sold,
+    .product-remain
+      span
+        margin-left: 5px
+
+  .product-description
+    margin-bottom: 20px
+    color: #555
+  .product-favorite
+    display: block
+    margin-bottom: 20px
+    cursor: pointer
+    i
+      margin-right: 10px
+  .product-quantity
+    display: inline-flex
+    margin-bottom: 20px
+    border: 1px solid #ccc
+    span
+      +flex-xy
+      width: 30px
+      height: 30px
+      background-color: $color-placeholder
+      line-height: 1
+      cursor: pointer
+    .quantity
+      width: 80px
+      text-align: center
+  .product-buttons
+    display: flex
+    margin: 0 -10px
+    .common-button
+      margin: 0 10px
+  .product-price-wrapper
+    margin-bottom: 20px
+    .product-price
+      color: #f00
+      font-size: 36px
+      font-weight: 700
+      .unit
+
+  .product-info
+    margin-bottom: 30px
