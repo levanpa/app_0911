@@ -3,7 +3,7 @@
   section.section-product-related
     .wrapper
       h2.section-title Related Product
-      ul.product-list(ref="productList", @mousedown="mouseDownHandler", @mousemove="mouseMoveHandler", @mouseup="mouseUpHandler")
+      ul.product-list(ref="productList", :class="{ 'is-grabbing': isGrabbing }", @mousedown="mouseDown", @mousemove="mouseMove", @mouseup="mouseUp", @mouseleave="mouseUp")
         each item in Array(8)
           li.product-item
             a.item-wrapper.trans(href="#", @mousedown.stop)
@@ -25,32 +25,25 @@ export default {
   data() {
     return {
       position: { left: 0, x: 0 },
-      scrollLeft: 0,
-      refProductList: this.$refs.productList,
       isGrabbing: false,
     };
   },
   methods: {
-    mouseDownHandler: function (event) {
-      // this.log(target);
+    mouseDown: function (event) {
       this.position = {
         left: this.$refs.productList.scrollLeft,
         x: event.clientX,
       };
       this.isGrabbing = true;
-      this.$refs.productList.style.cursor = "grabbing";
-      this.$refs.productList.style.userSelect = "none";
     },
-    mouseMoveHandler: function (event) {
+    mouseMove: function (event) {
       if (this.isGrabbing) {
         const dx = event.clientX - this.position.x;
         this.$refs.productList.scrollLeft = this.position.left - dx;
       }
     },
-    mouseUpHandler: function () {
+    mouseUp: function () {
       this.isGrabbing = false;
-      this.$refs.productList.style.cursor = "grab";
-      this.$refs.productList.style.removeProperty("user-select");
     },
   },
 };

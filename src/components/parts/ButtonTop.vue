@@ -1,6 +1,6 @@
 <template lang="pug">
 .button-to-top.trans(@click="goToTop()")
-  i.icon.fas.fa-arrow-up
+  i.icon.fas.fa-arrows-alt-v
 </template>
 
 <script>
@@ -8,8 +8,8 @@ export default {
   name: "ButtonTop",
   methods: {
     goToTop: function () {
-      this.log("log using global mixin");
-      document.querySelector("html").scrollTop = 0;
+      const htmlElement = document.documentElement;
+      htmlElement.scrollTop = htmlElement.scrollTop > 500 ? 0 : htmlElement.scrollHeight;
     },
   },
 };
@@ -26,7 +26,7 @@ export default {
   box-shadow: 0 0 6px 4px rgba(#000,.1)
   position: fixed
   right: 40px
-  bottom: 60px
+  bottom: 160px
   z-index: 100
   cursor: pointer
   .icon
