@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import * as VueRouter from 'vue-router';
 import Home from "./components/Home.vue";
+import Products from "./components/ProductList.vue";
 import ProductDetail from "./components/ProductDetail.vue";
 import Login from "./components/parts/Login.vue";
 import Signup from "./components/parts/Signup.vue";
@@ -9,6 +10,7 @@ import ForgotPass from "./components/parts/ForgotPass.vue";
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/products', component: Products },
   { path: '/product-detail', component: ProductDetail },
   { path: '/login', component: Login },
   { path: '/signup', component: Signup },

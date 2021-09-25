@@ -11,7 +11,7 @@ header.header-component(:class="{ 'is-active': isActive }")
         li.navigation-item
           router-link.navigation-link(to="/") About Us
         li.navigation-item
-          router-link.navigation-link(to="/") Pages
+          router-link.navigation-link(to="/products") Products
         li.navigation-item
           router-link.navigation-link(to="/") Contact
         li.navigation-item
