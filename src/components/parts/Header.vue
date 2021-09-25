@@ -7,19 +7,19 @@ header.header-component(:class="{ 'is-active': isActive }")
     nav.header-navigation
       ul
         li.navigation-item
-          a.navigation-link(href="#") Home
+          router-link.navigation-link(to="/") Home
         li.navigation-item
-          a.navigation-link(href="#") About Us
+          router-link.navigation-link(to="/") About Us
         li.navigation-item
-          a.navigation-link(href="#") Services
+          router-link.navigation-link(to="/") Pages
         li.navigation-item
-          a.navigation-link(href="#") Prices
+          router-link.navigation-link(to="/") Contact
         li.navigation-item
-          a.navigation-link(href="#") Faq
+          router-link.navigation-link(to="/") User
         li.navigation-item
-          a.navigation-link(href="#") Contact
+          router-link.navigation-link(to="/login") Login
     .header-right
-      .common-button.cart-button.trans Cart
+      router-link.common-button.cart-button.trans(to="/") Cart
 </template>
 
 <script>
