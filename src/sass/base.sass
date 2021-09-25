@@ -76,7 +76,7 @@ address
   @page :first
     margin-top: 0
 
-/* GENERAL
+/* common
  * -----------------------------------------------*/
 html
   scroll-behavior: smooth
@@ -103,6 +103,34 @@ a
   overflow: hidden
   text-overflow: ellipsis
   -webkit-box-orient: vertical
+router-link
+  cursor: pointer
+
+img
+  background-color: $color-placeholder
+.section-title
+  max-width: 800px
+  margin: 0 auto 40px
+  color: #303442
+  font-size: 40px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: .1em
+
+.common-button
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  min-width: 100px
+  height: 48px
+  padding: 5px 30px
+  color: #fff
+  background-color: $color-primary
+  border-radius: 5px
+  font-weight: 700
+  text-align: center
+  cursor: pointer
 
 /* RESPONSIVE
  * -----------------------------------------------*/

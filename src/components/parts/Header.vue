@@ -2,7 +2,7 @@
 - var imgPath = '@/assets/img/';
 header.header-component(:class="{ 'is-active': isActive }")
   .wrapper
-    .header-logo
+    router-link.header-logo.trans(to="/")
       img(src=``, width="223", height="62", alt="missing")
     nav.header-navigation
       ul

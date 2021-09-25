@@ -1,7 +1,7 @@
 <template lang="pug">
 .product-detail-component
   section.section-product-detail
-    .wrapper
+    .wrapper.is-flex
       .product-image-wrapper
         .big-image
           img(src=``, width="504", height="504", alt="missing")
@@ -62,12 +62,17 @@
           li - Chất liệu: Thép không gỉ
         p Kích thước: - Kéo thẳng: 17cm- Lưới: 8cm Kéo tỉa: 17cm- Lưỡi:8 cm
         p Tính Năng: Dùng để cắt và tỉa mỏng tóc cho người lớn và trẻ nhỏ, Làm quà tặng rất sang trọng.
+  ProductRelated
 </template>
 
 <script>
+import ProductRelated from "./parts/ProductRelated.vue";
+
 export default {
   name: "ProductDetail",
-  components: {},
+  components: {
+    ProductRelated,
+  },
   data() {
     return {
       quantity: 1,
