@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "../sass/pages/product-list.sass"
 @import "../sass/parts/product-list.sass"
 </style>

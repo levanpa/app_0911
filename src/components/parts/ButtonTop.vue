@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .button-to-top
   +flex-xy
   width: 60px

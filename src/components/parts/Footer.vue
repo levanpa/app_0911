@@ -49,6 +49,6 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "../../sass/parts/footer.sass"
 </style>

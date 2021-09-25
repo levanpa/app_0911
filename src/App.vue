@@ -19,5 +19,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="sass">
+@import "./sass/base.sass"
 </style>

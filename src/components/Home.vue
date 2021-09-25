@@ -84,6 +84,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "../sass/pages/home.sass"
+@import "../sass/parts/product-list.sass"
 </style>
