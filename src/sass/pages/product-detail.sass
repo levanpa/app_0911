@@ -1,6 +1,6 @@
 @charset "utf-8"
 
-.section-product-detail
+.product-detail-component
   .wrapper
     display: flex
     margin-bottom: 40px
@@ -22,7 +22,7 @@
     flex: 1
     .product-name
       margin-bottom: 20px
-      -webkit-line-clamp: 2
+      -webkit-line-clamp: 3
       font-size: 30px
       font-weight: 700
     .product-evaluate
@@ -53,6 +53,8 @@
     cursor: pointer
     i
       margin-right: 10px
+    &.is-favorite i
+      color: $color-primary
   .product-quantity
     display: inline-flex
     margin-bottom: 20px
@@ -64,6 +66,7 @@
       background-color: $color-placeholder
       line-height: 1
       cursor: pointer
+      user-select: none
     .quantity
       width: 80px
       text-align: center
@@ -80,5 +83,19 @@
       font-weight: 700
       .unit
 
-  .product-info
-    margin-bottom: 30px
+  .product-info-wrapper
+    .product-info
+      margin-bottom: 30px
+      img
+        display: block
+        margin: 0 auto
+        margin-bottom: 20px
+        background-color: $color-placeholder
+      h2, h3, h4, h5, h6
+        margin-bottom: 20px
+        font-size: 20px
+        font-weight: 700
+      p, li
+        margin-bottom: 10px
+      ul, ol
+        margin-bottom: 20px
