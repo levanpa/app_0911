@@ -15,7 +15,7 @@ header.header-component(:class="{ 'is-active': isActive }")
         li.navigation-item
           router-link.navigation-link(to="/contact") Contact
         li.navigation-item
-          router-link.navigation-link(to="/") User
+          router-link.navigation-link(to="/account") User
         li.navigation-item
           router-link.navigation-link(to="/login") Login
     .header-right
