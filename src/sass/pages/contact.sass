@@ -1,0 +1,30 @@
+@charset "utf-8"
+
+.contact-component
+  padding: 100px 0
+  .contact-wrapper
+    display: flex
+    background-color: #fff
+    box-shadow: 0 0 0 20px rgba($color-primary,.2)
+    border-radius: 20px
+    overflow: hidden
+  .content-wrapper
+    flex: 1
+    padding: 80px 60px
+  .contact-image
+    flex: 450px 0 0
+  .contact-info
+    margin-bottom: 30px
+    > li
+      padding-left: 25px
+      position: relative
+      &::before
+        content: ""
+        width: 16px
+        height: 16px
+        background-color: $color-placeholder
+        position: absolute
+        top: 3px
+        left: 0
+      &:not(:last-child)
+        margin-bottom: 12px

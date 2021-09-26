@@ -81,7 +81,6 @@
     color: #fff
   .contact-info
     > li
-      margin-bottom: 23px
       padding-left: 25px
       position: relative
       &::before
@@ -90,8 +89,10 @@
         height: 16px
         background-color: $color-placeholder
         position: absolute
-        top: 4px
+        top: 3px
         left: 0
+      &:not(:last-child)
+        margin-bottom: 23px
   .phone-number
     color: #bbbdc3
     pointer-events: none

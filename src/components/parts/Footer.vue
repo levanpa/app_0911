@@ -21,7 +21,7 @@
         ul.contact-info
           li.info-address
             address 8494 Signal Hill Road Manassas, VA, 20110
-          li.info-time Mon-Fri <time>08:00 AM</time> - <time>05:00 PM</time>
+          li.info-time Mon-Fri <time datetime="08:00">08:00 AM</time> - <time datetime="17:00">05:00 PM</time>
           li.info-phone
             a.phone-number(href="tel:1(800)7654321") 1(800)7654321
     .footer-right

@@ -7,6 +7,7 @@ import ProductDetail from "./components/ProductDetail.vue";
 import Login from "./components/parts/Login.vue";
 import Signup from "./components/parts/Signup.vue";
 import ForgotPass from "./components/parts/ForgotPass.vue";
+import Contact from "./components/Contact.vue";
 
 const routes = [
   { path: '/', component: Home },
@@ -15,6 +16,7 @@ const routes = [
   { path: '/login', component: Login },
   { path: '/signup', component: Signup },
   { path: '/forgot-password', component: ForgotPass },
+  { path: '/contact', component: Contact },
 ];
 
 const router = VueRouter.createRouter({
@@ -24,7 +26,7 @@ const router = VueRouter.createRouter({
 
 router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
-  setTimeout(() => next(), 50);
+  setTimeout(() => next(), 100);
 });
 
 // init vue app

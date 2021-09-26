@@ -13,7 +13,7 @@ header.header-component(:class="{ 'is-active': isActive }")
         li.navigation-item
           router-link.navigation-link(to="/products") Products
         li.navigation-item
-          router-link.navigation-link(to="/") Contact
+          router-link.navigation-link(to="/contact") Contact
         li.navigation-item
           router-link.navigation-link(to="/") User
         li.navigation-item
