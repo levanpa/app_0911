@@ -78,9 +78,19 @@ include ../pug/mixins.pug
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "Home",
   components: {},
+  created() {
+    // just testing
+    console.log("route:", this.$route.fullPath);
+    console.log("test data from store:", this.testData);
+  },
+  computed: {
+    ...mapState(["testData"]),
+  },
 };
 </script>
 
