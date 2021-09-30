@@ -22,8 +22,7 @@ const routes = [
 
 const router = VueRouter.createRouter({
   routes,
-  mode: 'history',
-  history: VueRouter.createWebHashHistory(),
+  history: VueRouter.createWebHistory(),
 });
 
 router.beforeEach((to, from, next) => {
