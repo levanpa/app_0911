@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from "./components/parts/Header.vue";
-import Footer from "./components/parts/Footer.vue";
+import Header from "@/components/parts/Header.vue";
+import Footer from "@/components/parts/Footer.vue";
 
 export default {
   name: "App",

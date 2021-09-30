@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
-import App from './App.vue';
-import router from './base/router.js';
-import mixins from './base/mixins.js';
-import store from './base/store.js';
+import App from '@/App.vue';
+import router from '@/base/router.js';
+import mixins from '@/base/mixins.js';
+import store from '@/base/store.js';
 
 const vueApp = createApp(App);
 
