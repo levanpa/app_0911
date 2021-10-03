@@ -3,7 +3,7 @@
 // .section-keyvisual
 .section-keyvisual
   min-height: 600px
-  height: calc(100vh - $header-height)
+  height: calc(100vh - 122px)
   padding: 50px 0
   background-color: $color-placeholder
   position: relative
@@ -41,16 +41,17 @@
     color: #7b7b7b
   .feature-item
     margin-bottom: 10px
-    padding-left: 25px
+    padding-left: 20px
     position: relative
     &::before
-      content: ""
-      width: 13px
-      height: 13px
-      background-color: $color-placeholder
+      +icon-awesome
+      content: "\f0da"
+      color: $color-primary
       position: absolute
-      top: 6px
+      top: 1px
       left: 0
+      font-size: 20px
+      font-weight: 700
 
 // .section-product
 .section-product
@@ -122,16 +123,17 @@
     border-bottom: 1px solid #999
   .feature-item
     margin-bottom: 10px
-    padding-left: 25px
+    padding-left: 20px
     position: relative
     &::before
-      content: ""
-      width: 13px
-      height: 13px
-      background-color: $color-placeholder
+      +icon-awesome
+      content: "\f0da"
+      color: $color-primary
       position: absolute
-      top: 6px
+      top: 1px
       left: 0
+      font-size: 20px
+      font-weight: 700
 
 // .section-partner
 .section-partner

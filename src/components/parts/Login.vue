@@ -1,4 +1,5 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .login-component
   .wrapper.login-wrapper
     .content-wrapper
@@ -20,15 +21,19 @@
           .login-social
             span.social-text Or login with
             ul.social-list
-              each item in Array(3)
-                li.social-item
-                  a.social-link.trans(href="#")
-                    img.social-image(src=``, width="40", height="40", alt="missing")
+              li.social-item
+                a.social-link.trans(href="#")
+                  i.fab.fa-google
+              li.social-item
+                a.social-link.trans(href="#")
+                  i.fab.fa-facebook
+              li.social-item
+                a.social-link.trans(href="#")
+                  i.fab.fa-google
           .form-links
             router-link.form-link.trans(to="/signup") Sign up
             router-link.form-link.trans(to="/forgot-password") Forgot password?
-    img.login-image(src=``, width="650", height="800", alt="missing")
-    //- img(src=`${imgPath}`, width="650", height="800", alt="missing")
+    img.login-image(src=`${imgPath}1200x1200.png`, width="650", height="800", alt="missing")
 </template>
 
 <script>

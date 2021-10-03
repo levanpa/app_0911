@@ -1,4 +1,5 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .contact-component
   .wrapper.contact-wrapper
     .content-wrapper
@@ -16,15 +17,14 @@
           span.form-text Your email
           input.form-input(ref="input-email", type="text", placeholder="example@gmail.com")
         .form-row
-          span.form-text Your phone
+          span.form-text Your phone number
           input.form-input(ref="input-phone", type="text")
         .form-row
           span.form-text Your message
           textarea.form-textarea(ref="textarea-message")
         .form-row
           button.common-button.trans Send
-    img.contact-image(src=``, width="450", height="911", alt="missing")
-    //- img(src=`${imgPath}`, width="450", height="911", alt="missing")
+    img.contact-image(src=`${imgPath}1200x1200.png`, width="450", height="911", alt="missing")
 </template>
 
 <script>

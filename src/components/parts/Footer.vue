@@ -1,4 +1,5 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .footer-component
   .wrapper
     .subscribe-box
@@ -10,8 +11,7 @@
     .footer-left
       .footer-top
         .footer-logo
-          img(src=``, width="223", height="62", alt="missing", loading="lazy")
-          //- img(src=`${imgPath}`, width='223', height='62', alt='missing', loading='lazy')
+          img(src=`${imgPath}223x62.png`, width="223", height="62", alt="missing", loading="lazy")
         p.footer-description Our experienced electricians are highly trained in all aspects of electrical service, from office lighting and security systems to emergency repair.
       .footer-middle
         ul.sitemap
@@ -26,15 +26,20 @@
             a.phone-number(href="tel:1(800)7654321") 1(800)7654321
     .footer-right
       .footer-map
-        img(src=``, width="430", height="300", alt="missing", loading="lazy")
-        //- img(src=`${imgPath}`, width="430", height="300", alt="missing", loading="lazy")
+        img(src=`${imgPath}430x300.png`, width="430", height="300", alt="missing", loading="lazy")
   .wrapper
     .footer-bottom
       p.copyright © 2020 Electrical Services. All Rights Reserved.
       ul.social-list
-        each item in Array(3)
-          li.social-item
-            a.social-link.trans(href="#", target="_blank", rel="noopener")
+        li.social-item
+          a.social-link.trans(href="#", target="_blank", rel="noopener")
+            i.fab.fa-facebook-square
+        li.social-item
+          a.social-link.trans(href="#", target="_blank", rel="noopener")
+            i.fab.fa-youtube-square
+        li.social-item
+          a.social-link.trans(href="#", target="_blank", rel="noopener")
+            i.fab.fa-twitter-square
   ButtonTop
 </template>
 

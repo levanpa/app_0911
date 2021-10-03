@@ -1,16 +1,15 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .product-detail-component
   section.section-product-detail
     .wrapper.is-flex
       .product-image-wrapper
         .big-image
-          img(src=``, width="504", height="504", alt="missing")
-          //- img(src=`${imgPath}`, width="504", height="504", alt="missing")
+          img(src=`${imgPath}1200x1200.png`, width="504", height="504", alt="missing")
         ul.thumbnail-list
           each item in Array(6)
             li.thumbnail-item.trans
-              img(src=``, width="74", height="74", alt="missing")
-              //- img(src=`${imgPath}`, width="74", height="74", alt="missing")
+              img(src=`${imgPath}1200x1200.png`, width="74", height="74", alt="missing")
       .product-detail-wrapper
         h2.product-name.limit-lines TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược
         .product-evaluate
@@ -44,8 +43,7 @@
           li - Thiết kế nhỏ gọn ,tiện dụng.
           li - Lưỡi cắt mỏng ,mau giúp cắt sạch ,trắng kể cả tóc mỏng ,thưa.
           li - Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt.
-        img(src=``, width="700", height="700", alt="missing", loading="lazy")
-        //- img(src=`${imgPath}`, width='700', height='700', alt='missing', loading='lazy')
+        img(src=`${imgPath}1200x1200.png`, width="700", height="700", alt="missing", loading="lazy")
         ul
           li - Lưỡi dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa.
           li - Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài.
@@ -54,8 +52,7 @@
           li - Sản phẩm được thiết kế có tay cầm và nút điều khiển thuận tiện cho cả 2 tay.
           li - Sản phẩm rất an toàn khi cắt tóc với mọi gia đình.Máy có bộ phận giảm ồn, chạy êm nhẹ nhàng khi cắt tóc . Động cơ vận hành cực kỳ êm ái, không gây ra tiếng ồn khó chịu, có thể cắt tóc cho bé ngay cả khi bé đang ngủ.
           li - Sản phẩm dùng pin sạc rất tiện dụng, sạc 8 tiếng thì thời gian sử dụng liên tục lên đến 80 phút. Sản phẩm rất an toàn khi cắt tóc cho mọi gia đình.
-        img(src=``, width="500", height="500", alt="missing", loading="lazy")
-        //- img(src=`${imgPath}`, width='500', height='500', alt='missing', loading='lazy')
+        img(src=`${imgPath}1200x1200.png`, width="500", height="500", alt="missing", loading="lazy")
         h3 BỘ KÉO CẮT VÀ TỈA TÓC JAPAN1
         ul
           li - Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác.

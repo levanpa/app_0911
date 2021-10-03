@@ -1,9 +1,9 @@
 <template lang="pug">
-- var imgPath = '@/assets/img/';
+- var imgPath = '@/assets/img/common/';
 header.header-component(:class="{ 'is-active': isActive }")
   .wrapper
     router-link.header-logo.trans(to="/")
-      img(src=``, width="223", height="62", alt="missing")
+      img(src=`${imgPath}223x62.png`, width="223", height="62", alt="missing")
     nav.header-navigation
       ul
         li.navigation-item

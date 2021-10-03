@@ -1,4 +1,5 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .product-list-component
   section.section-product-list
     .wrapper
@@ -7,8 +8,7 @@
         each item in Array(24)
           li.product-item
             router-link.item-wrapper.trans(to="/product-detail")
-              img.product-image(src=``, width="278", height="278", alt="missing", loading="lazy")
-              //- img.product-image(src=`${imgPath}`, width='278', height='278', alt='missing', loading='lazy')
+              img.product-image(src=`${imgPath}280x280.png`, width="280", height="280", alt="missing", loading="lazy")
               h3.product-name.limit-lines Sữa tắm nước hoa Nhật Bản cánh hoa thật Lavender AVATAR hương thơm quý phái 500ml
               .product-bottom
                 span.product-price 2.315.000

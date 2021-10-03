@@ -1,4 +1,5 @@
 <template lang="pug">
+- var imgPath = '@/assets/img/common/';
 .login-component.is-forgot-password
   .wrapper.login-wrapper
     .content-wrapper
@@ -14,8 +15,7 @@
           .form-links
             router-link.form-link.trans(to="/login") Login
             router-link.form-link.trans(to="/signup") Sign up
-    img.login-image(src=``, width="650", height="400", alt="missing")
-    //- img(src=`${imgPath}`, width="650", height="400", alt="missing")
+    img.login-image(src=`${imgPath}1200x1200.png`, width="650", height="400", alt="missing")
 </template>
 
 <script>

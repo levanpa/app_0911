@@ -1,6 +1,6 @@
 <template lang="pug">
 include ../pug/mixins.pug
-- var imgPath = '@/assets/img/';
+- var imgPath = '@/assets/img/common/';
 
 .home-component
   section.section-keyvisual
@@ -15,10 +15,10 @@ include ../pug/mixins.pug
       ul.special-list
         each item in Array(2)
           li.special-item
-            img.item-image(src=``, width="670", height="550", alt="missing", loading="lazy")
-            //- img.item-image(src=`${imgPath}`, width="670", height="550", alt="", loading="lazy")
+            img.item-image(src=`${imgPath}670x550.png`, width="670", height="550", alt="missing", loading="lazy")
             .item-content
-              h3.item-name Outstanding Residential &amp; Commercial Services
+              h3.item-name
+                router-link.trans(to="/product-detail") Outstanding Residential &amp; Commercial Services
               p.item-description All of our services are backed by our 100% satisfaction guarantee. Our electricians can install anything from new security lighting for your outdoors to a whole home generator that will keep your appliances working during a power outage.
               ul.feature-list
                 each item in ['Full-service electrical layout, design','Wiring and installation/upgrades','Emergency power solutions (generators)','Virtually any electrical needs you have – just ask!']
@@ -31,8 +31,7 @@ include ../pug/mixins.pug
         each item in Array(8)
           li.product-item
             router-link.item-wrapper.trans(to="/product-detail")
-              img.product-image(src=``, width="278", height="278", alt="missing", loading="lazy")
-              //- img.product-image(src=`${imgPath}`, width='278', height='278', alt='missing', loading='lazy')
+              img.product-image(src=`${imgPath}280x280.png`, width="280", height="280", alt="missing", loading="lazy")
               h3.product-name.limit-lines Sữa tắm nước hoa Nhật Bản cánh hoa thật Lavender AVATAR hương thơm quý phái 500ml
               .product-bottom
                 span.product-price 2.315.000
@@ -57,8 +56,7 @@ include ../pug/mixins.pug
       ul.pricing-list
         each item in Array(3)
           li.pricing-item
-            img.pricing-icon(src=``, width="49", height="49", alt="missing", loading="lazy")
-            //- img.pricing-icon(src=`${imgPath}`, width='49', height='49', alt='missing', loading='lazy')
+            img.pricing-icon(src=`${imgPath}1200x1200.png`, width="49", height="49", alt="missing", loading="lazy")
             h3.pricing-title Commercial Service
             ul.feature-list
               each item in ['Indoor/outdoor Lighting Installation','Appliance &amp; Fixture Installation','Annual Electrical Inspection','Ceiling Fan Installation','New &amp; Replacement Wiring','Surge Protection Maintenance','24-hour Response']
@@ -71,10 +69,9 @@ include ../pug/mixins.pug
       ul.partner-list
         each item in Array(10)
           li.partner-item
-            img(src=``, width="150", height="100", alt="missing", loading="lazy")
+            img(src=`${imgPath}150x100.png`, width="150", height="100", alt="missing", loading="lazy")
           li.partner-item
-            img(src=``, width="100", height="100", alt="missing", loading="lazy")
-            //- img(src=`${imgPath}`, width='150', height='100', alt='missing', loading='lazy')
+            img(src=`${imgPath}100x100.png`, width="100", height="100", alt="missing", loading="lazy")
 </template>
 
 <script>
