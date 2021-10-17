@@ -20,10 +20,10 @@
               a.sitemap-link.trans(href="#")!= item
         ul.contact-info
           li.info-address
-            address 8494 Signal Hill Road Manassas, VA, 20110
+            address {{ company.address }}
           li.info-time Mon-Fri <time datetime="08:00">08:00 AM</time> - <time datetime="17:00">05:00 PM</time>
           li.info-phone
-            a.phone-number(href="tel:1(800)7654321") 1(800)7654321
+            a.phone-number(:href="`tel:${company.phone}`") {{ company.phone }}
     .footer-right
       .footer-map
         img(src=`${imgPath}430x300.png`, width="430", height="300", alt="missing", loading="lazy")
@@ -45,11 +45,15 @@
 
 <script>
 import ButtonTop from "./ButtonTop.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "Footer",
   components: {
     ButtonTop,
+  },
+  computed: {
+    ...mapState(["company"]),
   },
 };
 </script>

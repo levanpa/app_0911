@@ -28,17 +28,17 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "Contact",
   data() {
-    return {
-      company: {},
-    };
+    return {};
   },
   methods: {},
-  created() {
-    const api = "http://localhost:3000/company/";
-    this.axios.get(api).then((response) => (this.company = response.data));
+  created() {},
+  computed: {
+    ...mapState(["company"]),
   },
 };
 </script>
