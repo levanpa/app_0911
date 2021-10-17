@@ -1,6 +1,131 @@
 {
-  "company" : {
+  "company": {
     "phone": "1(800)7654321",
     "address": "8494 Signal Hill Road Manassas, VA, 20110"
-  }
+  },
+  "product": [
+    {
+      "id": 1,
+      "name": "221 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 376000,
+      "origin_price": 486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 64,
+      "stock": 100,
+      "date_created": "",
+      "date_updated": "",
+      "is_favorite": true,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 2,
+      "name": "222 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 3,
+      "name": "223 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 4,
+      "name": "224 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 5,
+      "name": "225 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 6,
+      "name": "226 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 7,
+      "name": "227 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    },
+    {
+      "id": 8,
+      "name": "228 TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược",
+      "price": 1376000,
+      "origin_price": 1486000,
+      "image": "1200x1200.png",
+      "rate": 4.5,
+      "sold": 60,
+      "stock": 100,
+      "tags": [
+        "tong do",
+        "toc"
+      ],
+      "description": "Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm"
+    }
+  ]
 }

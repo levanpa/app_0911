@@ -4,7 +4,6 @@ import mixins from './mixins'
 const store = createStore({
   state() {
     return {
-      testData: 'SUCCESS',
       company: {},
     }
   },
@@ -15,7 +14,7 @@ const store = createStore({
   },
   actions: {
     async storeCompanyData(context) {
-      const data = await mixins.methods.getCompanyData();
+      const data = await mixins.methods.fetchCompanyData();
       context.commit('storeCompanyData', data);
     }
   },
