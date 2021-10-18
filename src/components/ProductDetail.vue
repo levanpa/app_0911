@@ -11,23 +11,23 @@
             li.thumbnail-item.trans
               img(src=`${imgPath}1200x1200.png`, width="74", height="74", alt="missing")
       .product-detail-wrapper
-        h2.product-name.limit-lines TÔNG ĐƠ CẮT TÓC KEMEI 5017 - Tặng Kèm Bộ Kéo Cắt Và Tỉa Tóc JAPAN1 Thép không Gỉ Cao Cấp Và Lược
+        h2.product-name.limit-lines {{ product.name }}
         .product-evaluate
           .product-rate.rate-45
           .product-sold Đã bán
-            span 64
+            span {{ product.sold }}
           .product-remain Còn lại
-            span 12
+            span {{ product.quantity }}
         .product-price-wrapper
-          .product-price 376.000
+          .product-price {{ product.price_text }}
             span.unit đ
-        .product-description Tông đơ lưỡi cắt mỏng, mau giúp cắt sạch, trắng kể cả tóc mỏng, thưa. Dùng cắt tóc cho các thành viên gia đình, chấn viền hay tạo kiểu rất tốt. Lưỡi Tông Đơ dao bằng thép không gỉ chất lượng cao có thể thoải mái cắt tóc thừa. Thời gian sử dụng bền bỉ Bộ lưỡi dao được làm hoàn toàn từ thép không gỉ nên có thời gian sử dụng lâu dài. Bộ Kéo Kéo cắt, kéo tỉa được làm từ chất liệu cao cấp bền bỉ, nhiệt luyện với nhiệt độ cao. Giúp cho kéo sắc bén và có tuổi thọ cao hơn những sản phẩm khác. Chất liệu Kéo: Thép không gỉ Kéo thẳng: 17cm- Lưỡi: 8cm, Kéo tỉa: 17cm- Lưỡi: 8cm
-        button.product-favorite.trans(:class="{ 'is-favorite': isFavorite }", @click="toggleFavorite()")
+        .product-description {{ product.description }}
+        button.product-favorite.trans(:class="{ 'is-favorite': product.is_favorite }", @click="toggleFavorite()")
           i.far.fa-heart
           | Favorite
         .product-quantity
           span.remove-one.trans(@click="adjustQuantity(-1)") -
-          input.quantity(type="text", v-model="quantity")
+          input.quantity(type="text", v-model="userQuantity" @change="adjustQuantity(0)")
           span.add-one.trans(@click="adjustQuantity(1)") +
         ul.product-buttons
           li.common-button.button-buy-now.trans Buy now
@@ -72,17 +72,24 @@ export default {
   },
   data() {
     return {
-      quantity: 1,
-      isFavorite: false,
+      product: {},
+      userQuantity: 1,
     };
   },
   methods: {
-    adjustQuantity: function (value) {
-      if (this.quantity + value > 0) this.quantity += value;
+    adjustQuantity(value) {
+      if (this.userQuantity + value > 0 && this.userQuantity + value < this.product.quantity) {
+        this.userQuantity += value;
+      }
     },
-    toggleFavorite: function () {
-      this.isFavorite = !this.isFavorite;
+    toggleFavorite() {
+      if (this.product?.is_favorite !== undefined) {
+        this.product.is_favorite = !this.product.is_favorite;
+      }
     },
+  },
+  async created() {
+    this.product = await this.fetchSingleProduct(this.$route.params.productId);
   },
 };
 </script>

@@ -5,17 +5,16 @@
     .wrapper
       h2.section-title Related Product
       ul.product-list(ref="productList", :class="{ 'is-grabbing': isGrabbing }", @mousedown="mouseDown", @mousemove="mouseMove", @mouseup="mouseUp", @mouseleave="mouseUp")
-        each item in Array(8)
-          li.product-item
-            router-link.item-wrapper.trans(to="/product-detail", @mousedown.stop)
+        li.product-item(v-for="item in productList", :key="item.id")
+            router-link.item-wrapper.trans(:to="`/product-detail/${item.id}`")
               img.product-image(src=`${imgPath}280x280.png`, width="280", height="280", alt="missing", loading="lazy")
-              h3.product-name.limit-lines Sữa tắm nước hoa Nhật Bản cánh hoa thật Lavender AVATAR hương thơm quý phái 500ml
+              h3.product-name.limit-lines {{ item.name }}
               .product-bottom
-                span.product-price 2.315.000
+                span.product-price {{ item.price_text }}
                   span.unit đ
-                span.product-sold Đã bán: 136
+                span.product-sold Đã bán: {{ item.sold }}
               .product-tags
-                span.product-discount -25%
+                span.product-discount -{{ item.discount }}%
 </template>
 
 <script>
@@ -26,6 +25,7 @@ export default {
     return {
       position: { left: 0, x: 0 },
       isGrabbing: false,
+      productList: {},
     };
   },
   methods: {
@@ -45,6 +45,9 @@ export default {
     mouseUp: function () {
       this.isGrabbing = false;
     },
+  },
+  async created() {
+    this.productList = await this.fetchProducts();
   },
 };
 </script>

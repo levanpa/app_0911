@@ -12,7 +12,7 @@ import Account from '@/components/Account.vue';
 const routes = [
   { path: '/', component: Home },
   { path: '/products', component: Products },
-  { path: '/product-detail', component: ProductDetail },
+  { path: '/product-detail/:productId', component: ProductDetail },
   { path: '/login', component: Login },
   { path: '/signup', component: Signup },
   { path: '/forgot-password', component: ForgotPass },
