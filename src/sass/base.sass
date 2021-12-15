@@ -50,6 +50,13 @@ textarea
 
 ul, ol, li
   list-style: none
+ol
+  counter-reset: count
+  > li
+    counter-increment: count
+
+address
+  font-style: normal
 
 /* PRINTING
  * -----------------------------------------------*/
@@ -69,8 +76,10 @@ ul, ol, li
   @page :first
     margin-top: 0
 
-/* GENERAL
+/* common
  * -----------------------------------------------*/
+html
+  scroll-behavior: smooth
 
 body
   color: $font-color
@@ -88,6 +97,38 @@ a
   display: none
 .container
   overflow: hidden
+  padding-top: $header-height
+.limit-lines
+  display: -webkit-box
+  overflow: hidden
+  text-overflow: ellipsis
+  -webkit-box-orient: vertical
+
+img
+  background-color: $color-placeholder
+.section-title
+  max-width: 800px
+  margin: 0 auto 40px
+  color: #303442
+  font-size: 40px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  letter-spacing: .1em
+
+.common-button
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  min-width: 100px
+  height: 48px
+  padding: 5px 30px
+  color: #fff
+  background-color: $color-primary
+  border-radius: 5px
+  font-weight: 700
+  text-align: center
+  cursor: pointer
 
 /* RESPONSIVE
  * -----------------------------------------------*/
@@ -105,7 +146,9 @@ a
     opacity: 1
     transition: opacity .25s ease
     &:hover
-      opacity: .8
+      opacity: .7
+  a[href^=tel]
+    pointer-events: none
 
 +mobile
   html

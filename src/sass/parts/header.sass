@@ -1,0 +1,44 @@
+@charset "utf-8"
+
+.header-component
+  width: 100%
+  background-color: #fff6f1
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  box-shadow: 0 2px 5px rgba(#000,.15)
+  &.is-active
+    .wrapper
+      min-height: 90px
+      padding: 10px 0
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: $header-height
+    max-height: $header-height
+    padding: 20px 0
+    transition: all 0.25s ease
+  .header-logo
+    flex: 223px 0 0
+    height: 62px
+    margin-right: 30px
+  .header-navigation
+    flex: 1
+    margin-right: 30px
+    > ul
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-end
+  .navigation-item
+    margin: 0 10px
+  .navigation-link
+    padding: 5px 10px
+    font-weight: 700
+    transition: color 0.25s ease
+    &:hover
+      color: $color-primary
+  .header-right
+    flex: 120px 0 0
+    text-align: right

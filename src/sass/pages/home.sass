@@ -1,16 +1,147 @@
 @charset "utf-8"
-@import "../base"
 
-#app
-  font-family: $font-sans
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: $font-color
-  margin-top: 60px
-  .hello
-    background-color: #fee
+// .section-keyvisual
+.section-keyvisual
+  min-height: 600px
+  height: calc(100vh - 122px)
+  padding: 50px 0
+  background-color: $color-placeholder
+  position: relative
+  .title-wrapper
+    +absolute-xy
+    max-width: 1000px
+    margin: 0 auto
+    color: #fff
+    font-size: 18px
+    text-align: center
+    .title
+      font-size: 50px
+      font-weight: 700
 
-+desktop
-  body
-    font-size: $font-size
+// .section-special
+.section-special
+  padding: 50px 0
+  .special-item
+    display: flex
+    margin-bottom: 80px
+  .item-image
+    flex: 670px 0 0
+  .item-content
+    padding: 50px 30px 30px 65px
+    background-color: #fff
+    box-shadow: -4px -4px 8px 3px rgba(#000,.1)
+    position: relative
+    top: 30px
+    left: -60px
+  .item-name
+    margin-bottom: 30px
+    font-size: 36px
+  .item-description
+    margin-bottom: 30px
+    color: #7b7b7b
+  .feature-item
+    margin-bottom: 10px
+    padding-left: 20px
+    position: relative
+    &::before
+      +icon-awesome
+      content: "\f0da"
+      color: $color-primary
+      position: absolute
+      top: 1px
+      left: 0
+      font-size: 20px
+      font-weight: 700
+
+// .section-product
+.section-product
+  padding: 40px 0
+
+// .section-intro
+.section-intro
+  min-height: 700px
+  padding-top: 30px
+  background-color: $color-placeholder
+  position: relative
+  .section-title
+    color: #fff
+  .intro-box
+    max-width: 600px
+    padding: 77px 100px 70px 90px
+    background-color: #fff
+    box-shadow: 0 0 8px 4px rgba(#000,.1)
+    +absolute-y
+    left: calc(50% - 450px)
+  .intro-title
+    margin-bottom: 10px
+    padding-left: 15px
+    background: linear-gradient(to bottom, $color-primary, $color-primary) left center/3px calc(100% - 20px) no-repeat
+    font-size: 36px
+    font-weight: 700
+    .is-highlight
+      color: $color-primary
+  .intro-text
+    margin-bottom: 40px
+    color: #7b7b7b
+  .button-wrapper
+    display: flex
+    flex-wrap: wrap
+    margin: -10px
+  .common-button
+    margin: 10px
+
+// .section-pricing
+.section-pricing
+  padding: 40px 0 80px
+  background-color: #fafafa
+  .pricing-list
+    display: flex
+    justify-content: center
+    margin: 60px -20px 0
+  .pricing-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: calc(100% / 3 - 100px)
+    margin: 0 20px
+    padding: 40px 30px
+    background-color: #fff
+    box-shadow: 0 0 8px 4px rgba(#000,.05)
+    border-radius: 10px
+    &:nth-child(2)
+      transform: scale(1.1)
+  .pricing-icon
+    margin-bottom: 20px
+  .pricing-title
+    margin-bottom: 20px
+    font-size: 24px
+    font-weight: 700
+    text-align: center
+  .feature-list
+    margin-bottom: 30px
+    padding-bottom: 10px
+    border-bottom: 1px solid #999
+  .feature-item
+    margin-bottom: 10px
+    padding-left: 20px
+    position: relative
+    &::before
+      +icon-awesome
+      content: "\f0da"
+      color: $color-primary
+      position: absolute
+      top: 1px
+      left: 0
+      font-size: 20px
+      font-weight: 700
+
+// .section-partner
+.section-partner
+  padding: 40px 0
+  .partner-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin: 0 -20px
+  .partner-item
+    margin: 10px 20px

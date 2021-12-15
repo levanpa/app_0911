@@ -1,0 +1,41 @@
+@charset "utf-8"
+
+.product-list
+  display: flex
+  flex-wrap: wrap
+  margin: -16px
+  .product-item
+    width: calc(25% - 28px)
+    margin: 14px
+    position: relative
+  .item-wrapper
+    display: block
+  .product-image
+    width: 100%
+    height: 280px
+    margin-bottom: 10px
+  .product-name
+    margin-bottom: 10px
+    color: #000
+    -webkit-line-clamp: 2
+    font-size: 18px
+    // font-weight: 700
+  .product-bottom
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+  .product-price
+    flex: 60% 0 0
+    color: $color-primary
+    font-weight: 700
+    .unit
+      margin-left: 5px
+      color: #555
+      font-weight: 400
+  .product-sold
+    color: #444
+    font-size: 14px
+  .product-tags
+    position: absolute
+    top: 0
+    right: 0

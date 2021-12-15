@@ -1,0 +1,120 @@
+@charset "utf-8"
+
+.footer-component
+  margin-top: 100px
+  padding-bottom: 50px
+  background-color: #303442
+  .subscribe-box
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100px
+    padding: 20px
+    background-color: $color-primary
+    position: relative
+    bottom: 50px
+  .subscribe-title
+    margin-right: 30px
+    color: #fff
+    font-size: 28px
+    font-weight: 700
+  .subscribe-form
+    display: inline-flex
+    align-items: center
+  .subscribe-input
+    height: 48px
+    margin-right: 20px
+    padding: 5px 20px
+    background-color: #fff
+    border-radius: 3px
+  .subscribe-button
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    height: 48px
+    width: 180px
+    padding: 5px 20px
+    border-radius: 3px
+    color: #fff
+    background-color: #303442
+    cursor: pointer
+
+  .wrapper.is-flex
+    display: flex
+    margin-bottom: 40px
+    color: #bbbdc3
+  .footer-left
+    flex: 680px 0 0
+    margin-right: 50px
+  .footer-top
+    margin-bottom: 40px
+    display: flex
+    align-items: flex-start
+  .footer-logo
+    flex: 223px 0 0
+    margin-right: 80px
+
+  .footer-middle
+    display: flex
+    align-items: flex-start
+  .sitemap
+    display: inline-flex
+    flex-wrap: wrap
+    flex: 260px 0 0
+    margin-right: 43px
+  .sitemap-item
+    width: 50%
+    margin-bottom: 8px
+    position: relative
+    &::before
+      +icon-awesome
+      content: "\f0da"
+      color: #fff
+      position: absolute
+      top: 2px
+      left: 0
+      font-weight: 700
+  .sitemap-link
+    display: inline-block
+    padding: 0 20px
+    color: #fff
+  .contact-info
+    > li
+      padding-left: 30px
+      position: relative
+      &::before
+        +icon-awesome
+        color: #fff
+        position: absolute
+        top: 3px
+        left: 0
+        font-weight: 700
+      &:not(:last-child)
+        margin-bottom: 23px
+    .info-address::before
+      content: "\f5a0"
+    .info-time::before
+      content: "\f64a"
+    .info-phone::before
+      content: "\f025"
+  .phone-number
+    color: #bbbdc3
+    pointer-events: none
+
+  .footer-bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .copyright
+    font-size: 14px
+    color: #bbbdc3
+  .social-list
+    display: inline-flex
+  .social-link
+    display: inline-block
+    width: 40px
+    height: 40px
+    margin-left: 5px
+    color: $color-placeholder
+    font-size: 40px
+    line-height: 1

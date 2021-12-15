@@ -1,17 +1,31 @@
 <template lang="pug">
-Home
+.container
+  Header
+  main.main
+    router-view
+  Footer
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Header from "@/components/parts/Header.vue";
+import Footer from "@/components/parts/Footer.vue";
+import { mapActions } from "vuex";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Home
-  }
-}
+    Header,
+    Footer,
+  },
+  created() {
+    this.storeCompanyData();
+  },
+  methods: {
+    ...mapActions(["storeCompanyData"]),
+  },
+};
 </script>
 
-<style>
+<style lang="sass">
+@import "./sass/base.sass"
 </style>
