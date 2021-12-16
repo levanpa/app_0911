@@ -1,91 +1,96 @@
 <template lang="pug">
 include ../pug/mixins.pug
-- var imgPath = '@/assets/img/common/';
+- var imgPath = '@/assets/img/common/'
 
-.home-component
+main.main.home-component
   section.section-keyvisual
+    img(src="https://acosmetics.com.vn/wp-content/uploads/2021/06/ctv-acosmetics.jpg", width="1343", height="492")
+  section.section-category
     .wrapper
-      .title-wrapper
-        p.description we can light everything
-        h2.title Nothing is#[br]Impossible for Us
-
-  section.section-special
+      h2.section-title Danh mục sản phẩm a cosmetics
+      ul.category-list
+        li.category-item(v-for="item in categoryList", :key="item.id")
+          router-link.category-link(:to="`/category-detail/${item.id}`")
+            img.category-image(src=`${imgPath}280x280.png`, width="270", height="270", :alt="item.name", loading="lazy")
+            .category-detail
+              h3.category-name {{ item.name }}
+              p.category-quantity {{ item.quantity }} SẢN PHẨM
+  section.section-favorite
     .wrapper
-      h2.section-title Special products
-      ul.special-list
-        each item in Array(2)
-          li.special-item
-            img.item-image(src=`${imgPath}670x550.png`, width="670", height="550", alt="missing", loading="lazy")
-            .item-content
-              h3.item-name
-                router-link.trans(to="/product-detail") Outstanding Residential &amp; Commercial Services
-              p.item-description All of our services are backed by our 100% satisfaction guarantee. Our electricians can install anything from new security lighting for your outdoors to a whole home generator that will keep your appliances working during a power outage.
-              ul.feature-list
-                each item in ['Full-service electrical layout, design','Wiring and installation/upgrades','Emergency power solutions (generators)','Virtually any electrical needs you have – just ask!']
-                  li.feature-item!= item
-
-  section.section-product
+      h2.section-title Combo ưu đãi được ưa chuộng
+      p.section-description Một số Combo ưu đãi của Sản phẩm A Cosmetics đang được ưa chuộng bởi các bạn trẻ tin tưởng và lựa chọn sử dụng
+      .favorite-list
+        .favorite-item
+          a.favorite-link.trans(href="#")
+            img.favorite-image(src=`${imgPath}280x280.png`, width="366", height="366", alt="Combo 3 Kem tắm trắng mềm nước hoa", loading="lazy")
+            span.favorite-category set combo
+            h3.favorite-name.limit-lines Combo 3 Kem tắm trắng mềm nước hoa
+            p.favorite-price
+              span.old 600,000 ₫
+              span.new 430,000 ₫
+  section.section-top-three
     .wrapper
-      h2.section-title Product list
-      ul.product-list
-        each item in Array(8)
-          li.product-item
-            router-link.item-wrapper.trans(to="/product-detail")
-              img.product-image(src=`${imgPath}280x280.png`, width="280", height="280", alt="missing", loading="lazy")
-              h3.product-name.limit-lines Sữa tắm nước hoa Nhật Bản cánh hoa thật Lavender AVATAR hương thơm quý phái 500ml
-              .product-bottom
-                span.product-price 2.315.000
-                  span.unit đ
-                span.product-sold Đã bán: 136
-              .product-tags
-                span.product-discount -25%
-
-  section.section-intro
+      h2.top-three-title BỘ BA SẢN PHẨM ĐƯỢC YÊU THÍCH
+      ul.category-list
+        li
+         a.category-link.is-active.trans(href="#") FOR FACE
+        li
+         a.category-link.trans(href="#") FOR BODY
+        li
+         a.category-link.trans(href="#") FOR HAIR
+      .list-wrapper
+        .product-list
+          each item in Array(4)
+            a.product-item.trans(href="#")
+              img.product-image(src=`${imgPath}280x280.png`, width="260", height="260", alt="Combo 3 Kem tắm trắng mềm nước hoa", loading="lazy")
+              span.product-category FOR BODY
+              h3.product-name.limit-lines Body &amp; Face Scrub Salt Trái Cây
+              p.product-price
+                span.old 250,000 ₫
+                span.new 190,000 ₫
+              .product-features
+                span.discount -24%
+  section.section-blog
     .wrapper
-      h2.section-title about company
-      .intro-box
-        .intro-title Do you #[span.is-highlight Need Help] With Electrical Maintenance?
-        .intro-text Our electrical repair and service options are proudly offered to clients. Give us a call today to schedule a free service estimate!
-        .button-wrapper
-          a.common-button.trans(href="#") Give Us a Call
-          a.common-button.trans(href="#") Free Estimate
-
-  section.section-pricing
-    .wrapper
-      h2.section-title pricing table
-      ul.pricing-list
-        each item in Array(3)
-          li.pricing-item
-            img.pricing-icon(src=`${imgPath}1200x1200.png`, width="49", height="49", alt="missing", loading="lazy")
-            h3.pricing-title Commercial Service
-            ul.feature-list
-              each item in ['Indoor/outdoor Lighting Installation','Appliance &amp; Fixture Installation','Annual Electrical Inspection','Ceiling Fan Installation','New &amp; Replacement Wiring','Surge Protection Maintenance','24-hour Response']
-                li.feature-item!= item
-            a.common-button.trans(href="#") 2.000.000đ
-
-  section.section-partner
-    .wrapper
-      h2.section-title our partner
-      ul.partner-list
-        each item in Array(10)
-          li.partner-item
-            img(src=`${imgPath}150x100.png`, width="150", height="100", alt="missing", loading="lazy")
-          li.partner-item
-            img(src=`${imgPath}100x100.png`, width="100", height="100", alt="missing", loading="lazy")
+      h2.section-title blog mỹ phẩm phương anh - a cosmetics
+      .blog-list
+        .blog-item
+          a.blog-link.trans(href="#")
+            img.blog-image(src=`${imgPath}280x280.png`, width="270", height="270", alt="", loading="lazy")
+            h3.blog-name.limit-lines Hướng dẫn sử dụng QR CODE kiểm tra sản phẩm Thật - giả?
 </template>
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   components: {},
-  created() {
-    console.log("route:", this.$route.fullPath);
+  data() {
+    return {
+      categoryList: [
+        {
+          name: 'for face',
+          quantity: 8
+        },
+        {
+          name: 'for body',
+          quantity: 7
+        },
+        {
+          name: 'for hair',
+          quantity: 2
+        },
+        {
+          name: 'set combo',
+          quantity: 11
+        }
+      ]
+    }
   },
-  computed: {},
-};
+  created() {},
+  computed: {}
+}
 </script>
 
 <style lang="sass" scoped>
 @import "../sass/pages/home.sass"
-@import "../sass/parts/product-list.sass"
 </style>
