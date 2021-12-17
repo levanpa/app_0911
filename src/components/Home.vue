@@ -58,12 +58,39 @@ main.main.home-component
           a.blog-link.trans(href="#")
             img.blog-image(src=`${imgPath}280x280.png`, width="270", height="270", alt="", loading="lazy")
             h3.blog-name.limit-lines Hướng dẫn sử dụng QR CODE kiểm tra sản phẩm Thật - giả?
+  section.section-contact
+    .wrapper.column-list
+      .column
+        h2.title LIÊN KẾT FACEBOOK
+        FbPage
+      .column.flex-column
+        p.small-title Giờ mở cửa: #[time 08:00] - #[time 21:00] (Thứ hai - Thứ bảy)
+        p.description Chủ Nhật chỉ bán hàng buổi sáng, các đơn hàng buổi chiều vui lòng chờ tới sáng thứ hai để được xử lí.
+        h2.title HOTLINE TƯ VẤN
+        a.phone-number(href="tel:0773691007") 077 369 1007
+        ul.button-list
+          li
+            a.facebook-link(href="#") Chat Facebook
+          li
+            a.contact-link.trans(href="#")
+              i.fas.fa-chevron-right
+              span LIÊN HỆ TƯ VẤN
+      .column
+        img.banner-image(src=`${imgPath}280x280.png`, width="380", height="380", alt="", loading="lazy")
+  section.section-coop
+    .wrapper
+      h2.coop-title ĐĂNG KÝ CỘNG TÁC VIÊN ACOSMETICS
+      p.text Đăng ký trở thành CTV của ACosmetics ngay hôm nay để nhận những ưu đãi hấp dẫn từ Công ty
+      a.button-detail Xem chi tiết
+        i.fas.fa-chevron-right
 </template>
 
 <script>
+import FbPage from '@/components/parts/FbPage.vue'
+
 export default {
   name: 'Home',
-  components: {},
+  components: { FbPage },
   data() {
     return {
       categoryList: [
