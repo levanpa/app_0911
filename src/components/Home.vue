@@ -5,6 +5,10 @@ include ../pug/mixins.pug
 main.main.home-component
   section.section-keyvisual
     img(src="https://acosmetics.com.vn/wp-content/uploads/2021/06/ctv-acosmetics.jpg", width="1343", height="492")
+    Slick(:options="sliderOptions")
+      each item, index in Array(6)
+        .slide-item
+          p= index + 1
   section.section-category
     .wrapper
       h2.section-title Danh mục sản phẩm a cosmetics
@@ -87,10 +91,11 @@ main.main.home-component
 
 <script>
 import FbPage from '@/components/parts/FbPage.vue'
+import Slick from '@/components/parts/Slick.vue'
 
 export default {
   name: 'Home',
-  components: { FbPage },
+  components: { FbPage, Slick },
   data() {
     return {
       categoryList: [
@@ -110,7 +115,11 @@ export default {
           name: 'set combo',
           quantity: 11
         }
-      ]
+      ],
+      sliderOptions: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
     }
   },
   created() {},

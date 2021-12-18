@@ -1,5 +1,5 @@
 <template lang="pug">
-.button-to-top
+.button-messenger
   i.icon.fab.fa-facebook-messenger
 </template>
 
@@ -11,14 +11,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.button-to-top
+.button-messenger
   +flex-xy
   width: 60px
   height: 60px
   background-color: #0084ff
   border-radius: 50%
   border: 20px solid #0084ff
-  box-shadow: 0 0 6px 4px rgba(#fff,.1)
+  box-shadow: 0 0 6px 4px rgba(#fff,.3)
   position: fixed
   right: 40px
   bottom: 160px
