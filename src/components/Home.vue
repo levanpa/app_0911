@@ -4,11 +4,9 @@ include ../pug/mixins.pug
 
 main.main.home-component
   section.section-keyvisual
-    img(src="https://acosmetics.com.vn/wp-content/uploads/2021/06/ctv-acosmetics.jpg", width="1343", height="492")
-    Slick(:options="sliderOptions")
-      each item, index in Array(6)
-        .slide-item
-          p= index + 1
+    Slick(:options="kvSliderOptions")
+      each item in Array(6)
+        img(src="https://acosmetics.com.vn/wp-content/uploads/2021/06/ctv-acosmetics.jpg", width="1343", height="492")
   section.section-category
     .wrapper
       h2.section-title Danh mục sản phẩm a cosmetics
@@ -23,15 +21,16 @@ main.main.home-component
     .wrapper
       h2.section-title Combo ưu đãi được ưa chuộng
       p.section-description Một số Combo ưu đãi của Sản phẩm A Cosmetics đang được ưa chuộng bởi các bạn trẻ tin tưởng và lựa chọn sử dụng
-      .favorite-list
-        .favorite-item
-          a.favorite-link.trans(href="#")
-            img.favorite-image(src=`${imgPath}280x280.png`, width="366", height="366", alt="Combo 3 Kem tắm trắng mềm nước hoa", loading="lazy")
-            span.favorite-category set combo
-            h3.favorite-name.limit-lines Combo 3 Kem tắm trắng mềm nước hoa
-            p.favorite-price
-              span.old 600,000 ₫
-              span.new 430,000 ₫
+      Slick.favorite-list(:options="favoriteSliderOptions")
+        each item in Array(6)
+          .favorite-item
+            a.favorite-link.trans(href="#")
+              img.favorite-image(src=`${imgPath}280x280.png`, width="366", height="366", alt="Combo 3 Kem tắm trắng mềm nước hoa", loading="lazy")
+              span.favorite-category set combo
+              h3.favorite-name.limit-lines Combo 3 Kem tắm trắng mềm nước hoa
+              p.favorite-price
+                span.old 600,000 ₫
+                span.new 430,000 ₫
   section.section-top-three
     .wrapper
       h2.top-three-title BỘ BA SẢN PHẨM ĐƯỢC YÊU THÍCH
@@ -57,11 +56,12 @@ main.main.home-component
   section.section-blog
     .wrapper
       h2.section-title blog mỹ phẩm phương anh - a cosmetics
-      .blog-list
-        .blog-item
-          a.blog-link.trans(href="#")
-            img.blog-image(src=`${imgPath}280x280.png`, width="270", height="270", alt="", loading="lazy")
-            h3.blog-name.limit-lines Hướng dẫn sử dụng QR CODE kiểm tra sản phẩm Thật - giả?
+      Slick(:options="blogSliderOptions")
+        each item in Array(12)
+          .blog-item
+            a.blog-link.trans(href="#")
+              img.blog-image(src=`${imgPath}280x280.png`, width="270", height="270", alt="", loading="lazy")
+              h3.blog-name.limit-lines Hướng dẫn sử dụng QR CODE kiểm tra sản phẩm Thật - giả?
   section.section-contact
     .wrapper.column-list
       .column
@@ -116,14 +116,29 @@ export default {
           quantity: 11
         }
       ],
-      sliderOptions: {
+      kvSliderOptions: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true
+      },
+      favoriteSliderOptions: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false
+      },
+      blogSliderOptions: {
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 4,
+        arrows: true,
+        dots: false
       }
     }
   },
   created() {},
-  computed: {}
+  computed: {},
+  methods: {}
 }
 </script>
 

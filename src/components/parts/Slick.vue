@@ -1,5 +1,5 @@
 <template lang="pug">
-.slider(:data-slick="convertedOptions")
+.slider-wrapper(:data-slick="convertedOptions")
   slot
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   data() {},
   mounted() {
-    $('.slider').slick()
+    this.create()
   },
   computed: {
     convertedOptions() {
@@ -29,10 +29,29 @@ export default {
       }
       return this.options
     }
+  },
+  methods: {
+    create: function() {
+      const $slick = $(this.$el)
+      $slick.on('afterChange', this.onAfterChange)
+      $slick.on('beforeChange', this.onBeforeChange)
+      $slick.on('init', this.onInit)
+      $slick.slick(this.options)
+    },
+    onAfterChange(event, slick, currentSlide) {
+      this.$emit('afterChange', event, slick, currentSlide)
+    },
+    onBeforeChange(event, slick, currentSlide, nextSlide) {
+      this.$emit('beforeChange', event, slick, currentSlide, nextSlide)
+    },
+    onInit(event, slick) {
+      this.$emit('init', event, slick)
+    }
   }
 }
 </script>
 
+<!-- slick default style -->
 <style>
 .slick-slider {
   position: relative;
@@ -131,4 +150,64 @@ export default {
 .slick-arrow.slick-hidden {
   display: none;
 }
+</style>
+
+<!-- custom style -->
+<style lang="sass">
+.slider-wrapper
+  .slick-arrow
+    width: 36px
+    height: 36px
+    border: 2px solid #555
+    border-radius: 20px
+    transition: all 0.3s ease
+    opacity: 0
+    cursor: pointer
+    +absolute-y
+    z-index: 1
+    text-indent: -9999px
+    &:after
+      +absolute-xy
+      font-family: $font-awesome
+      font-size: 14px
+      text-indent: 0
+      font-weight: 700
+    &:hover
+      color: #fff
+      background-color: #555
+  .slick-next
+    right: 30px
+    &:after
+      content: "\f054"
+  .slick-prev
+    left: 30px
+    &:after
+      content: "\f053"
+  &:hover
+    .slick-arrow
+      opacity: 1
+    .slick-next
+      right: 20px
+    .slick-prev
+      left: 20px
+
+  .slick-dots
+    display: flex
+    +absolute-x
+    bottom: 20px
+    button
+      opacity: 0
+      visibility: hidden
+    li
+      width: 12px
+      height: 12px
+      margin: 5px
+      background-color: #000
+      opacity: .4
+      transition: opacity .25s ease
+      border-radius: 12px
+      cursor: pointer
+      &.slick-active,
+      &:hover
+        opacity: 1
 </style>
