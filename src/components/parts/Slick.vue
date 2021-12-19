@@ -168,7 +168,7 @@ export default {
     text-indent: -9999px
     &:after
       +absolute-xy
-      font-family: $font-awesome
+      +icon-awesome
       font-size: 14px
       text-indent: 0
       font-weight: 700

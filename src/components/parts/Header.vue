@@ -17,7 +17,8 @@ header.header-component(:class="{ 'is-active': isActive }")
           img(src=`${imgPath}100x100.png`, width="85", height="120", alt="A Cosmetics - Mỹ phẩm Phương Anh")
       form.header-search-form
         input.search-input(type="text" placeholder="Nhập từ khóa tìm kiếm...")
-        i.fas.fa-search
+        button.trans(type="submit") 
+          i.fas.fa-search
       .contact-button
         i.fas.fa-headset
         span Hỗ trợ#[br]khách hàng
